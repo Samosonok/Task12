@@ -22,8 +22,8 @@ public class Main {
     public static Employee createEmployee(String name, String surname, double salary) {
         try {
             employee = new Employee(name, surname, salary);
-        } catch (EmployeeException e) {
-            System.err.println(e.getMessage());
+        } catch (NameException | SalaryException ex) {
+            System.err.println(ex.getMessage());
         }
         return employee;
     }

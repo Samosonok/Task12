@@ -9,7 +9,7 @@ public class Employee {
     String surname;
     double salary;
 
-    public Employee(String name, String surname, double salary) throws EmployeeException {
+    public Employee(String name, String surname, double salary) throws SalaryException, NameException {
         Validator.checkName(name, surname);
         Validator.checkSalary(salary);
         this.name = name;
